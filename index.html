@@ -22,23 +22,17 @@
   color: black;
 }
 
+.responsive {
+    max-width: 100%;
+    height: auto;
+  }
+
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
   .menu, .main, .right {
     width: 100%;
   }
-}
-@media (prefers-color-scheme: dark) {
-  /* dark mode */
-  .menu, .main, .right, .footer {
-    color:  white;
-    background-color: black;
-  }
 
-  head, body {
-    color: white;
-    background-color: black;
-  }
 }
 
 </style>
@@ -51,15 +45,15 @@
 
 <div style="overflow:auto">
   <div class="menu">
-    <a href="http://pf.kakao.com/_baeKb"><img src = "src/menu_kakao.png"></a>
-    <a href="https://sso.nongshim.com/nongshim/customer/counseling/receipt"><img src="src/menu_internet.png"></a>
-    <a href="tel:080-023-5181"><img src="src/menu_phone.png"></a>
-    <a href="http://brand.nongshim.com/shin-stirfry/main/index"><img src="src/menu_product.png"></a>
+    <a href="http://pf.kakao.com/_baeKb"><img class="responsive" src = "src/menu_kakao.png"></a>
+    <a href="https://sso.nongshim.com/nongshim/customer/counseling/receipt"><img class="responsive" src="src/menu_internet.png"></a>
+    <a href="tel:080-023-5181"><img class="responsive" src="src/menu_phone.png"></a>
+    <a href="http://brand.nongshim.com/shin-stirfry/main/index"><img class="responsive" src="src/menu_product.png"></a>
   </div>
 
 </div>
 
-<div class="footer" style="color: black; background-color: white;text-align:center;padding:10px;margin-top:7px;">Nongshim Loves Consumer</div>
+<div class="footer" style="color: black; background-color: white;text-align:center;padding:10px;margin-top:7px;">Nongshim Loves Customer</div>
 
 </body>
 </html>
