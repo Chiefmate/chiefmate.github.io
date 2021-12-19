@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.header {
+  border-bottom: 3px solid rgba(0,0,0,.1);
+}
+
 .menu {
   float: left;
   width: 100%;
@@ -25,12 +29,14 @@
 .responsive {
     max-width: 100%;
     height: auto;
+    box-shadow:5px 5px 10px grey;
   }
 
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
   .menu, .main, .right {
     width: 100%;
+    height: auto;
   }
 
 }
