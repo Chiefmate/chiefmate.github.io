@@ -10,32 +10,17 @@
 
 .menu {
   float: left;
-  width: 20%;
+  width: 100%;
   text-align: center;
 }
 
 .menu a {
-  background-color: #e5e5e5;
+  background-color: #df0029;
   padding: 8px;
   margin-top: 7px;
   display: block;
   width: 100%;
   color: black;
-}
-
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-}
-
-.right {
-  background-color: #e5e5e5;
-  float: left;
-  width: 20%;
-  padding: 15px;
-  margin-top: 7px;
-  text-align: center;
 }
 
 @media only screen and (max-width: 620px) {
@@ -44,12 +29,25 @@
     width: 100%;
   }
 }
+@media (prefers-color-scheme: dark) {
+  /* dark mode */
+  .menu, .main, .right, .footer {
+    color:  white;
+    background-color: black;
+  }
+
+  head, body {
+    color: white;
+    background-color: black;
+  }
+}
+
 </style>
 </head>
-<body style="font-family:Verdana;color:#e5e5e5;">
+<body style="font-family:Verdana;color: black; background-color: white;">
 
-<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
-  <img src="./src/site logo.png" style="max-width:100%;height:auto;"/>
+<div class="header" style="background-color:white;padding:15px;text-align:center;">
+  <img src="./src/white_logo.png" style="max-width:100%;height:auto;"/>
 </div>
 
 <div style="overflow:auto">
@@ -60,18 +58,9 @@
     <a href="http://brand.nongshim.com/shin-stirfry/main/index">제품 설명</a>
   </div>
 
-  <div class="main">
-    <h2>Lorum Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  </div>
-
-  <div class="right">
-    <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  </div>
 </div>
 
-<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+<div class="footer" style="color: black; background-color: white;text-align:center;padding:10px;margin-top:7px;">Nongshim Loves Consumer</div>
 
 </body>
 </html>
