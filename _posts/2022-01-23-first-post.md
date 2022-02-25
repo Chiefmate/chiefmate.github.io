@@ -10,6 +10,8 @@ tags: blog github_pages
 [Github Pages Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 에서 가져왔다.
 
+[Jekyll Markdown Reference](https://www.markdownguide.org/tools/jekyll/)도 참고했다.
+
 ---
 
 ## 이스케이프 문자
@@ -18,19 +20,19 @@ tags: blog github_pages
 
 ## 코드블럭 이용하기
 
-`` ``` ``를 이용하여 앞 뒤 한 줄씩 붙여준다.
+<code> ``` </code> 를 이용하여 앞 뒤 한 줄씩 붙여준다.
 
+<code>
 ```
-	```
-	int	main(void)
-	{
-		return (0);
-	}
-	```
+int	main(void)
+{
+	return (0);
+}
 ```
+</code>
 
 ### 언어 별 문법 하이라이트
-`` ``` c ``와 같이 뒤에 언어를 붙여준다. jekyll이 `redcarpet`을 지원하면서 가능해졌다고 한다.
+<code> ``` c </code>와 같이 뒤에 언어를 붙여준다. jekyll이 `redcarpet`을 지원하면서 가능해졌다고 한다.
 
 Ruby 코드
 ```
