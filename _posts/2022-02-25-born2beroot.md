@@ -12,7 +12,6 @@ toc_icon: "cog"
 ## 네트워크 기본 개념 정리
 
 [서버란?](https://lipcoder.tistory.com/514)
-
 [네트워크 기초 지식](https://lipcoder.tistory.com/515?category=908023)
 
 ## 모르는 단어 나열하기
@@ -36,6 +35,11 @@ toc_icon: "cog"
 ## VirtualBox vs. UTM
 가상 머신 Virtual Machine
 
+### VDI
+Virtual Disk Image
+
+버츄얼 박스는 3가지 포맷으로 하드디스크를 에뮬레이션함:
+native VDI, VMware의 VMDK, MS 윈도우의 VHD
 
 
 <!--
