@@ -34,13 +34,14 @@ toc_icon: "cog"
 과제에서 평가를 위해 Virtual disk의 signature를 저장하라고 함.
 일단 [lvm파트](#lvm)를 읽어보자.
 
+
 ## Debian vs. CentOS
 리눅스 배포판Linux Distribution (Distro)
 
 |리눅스 배포판			|Debian			|CentOS			|
 |:--------------------:	| :-----------: | :--------------:|
 | 						|데비안 계열	|레드햇 계열	|
-|Security Framework		|AppArmor		|SELinux		|
+|리눅스 보안모듈		|AppArmor		|SELinux		|
 
 데비안 계열의 배포판으로는 우분투Ubuntu가 있다.
 
@@ -60,11 +61,15 @@ Security Framework.
 
 [AppArmor wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)
 
-#lvm
+
 ## lvm
+<!--
+#lvm
+-->
 LVM: Logical Volume Manager
 
 [리눅스 LVM과 RAID 개념](https://wiseworld.tistory.com/32)
+
 
 ## ssh vs. telnet
 컴퓨터간 통신 Protocol.
@@ -85,6 +90,7 @@ SSH를 통해 **암호화된 통신**으로:
 [위키백과, 시큐어 셸](https://ko.wikipedia.org/wiki/%EC%8B%9C%ED%81%90%EC%96%B4_%EC%85%B8)
 
 [위키백과, 텔넷](https://ko.wikipedia.org/wiki/%ED%85%94%EB%84%B7)
+
 
 ## UFW firewall
 
