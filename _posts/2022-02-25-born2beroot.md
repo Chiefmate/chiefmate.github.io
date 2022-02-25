@@ -36,6 +36,8 @@ toc_icon: "cog"
 ## VirtualBox vs. UTM
 가상 머신 Virtual Machine
 
+
+
 <!--
 #sign
 -->
@@ -50,10 +52,10 @@ toc_icon: "cog"
 ## Debian vs. CentOS
 리눅스 배포판 Linux Distribution (Distro)
 
-|리눅스 배포판			|Debian			|CentOS			|
-|:--------------------:	| :-----------: | :--------------:|
-| 						|데비안 계열	|레드햇 계열	|
-|리눅스 보안모듈		|AppArmor		|SELinux		|
+|리눅스 배포판 				|Debian			|CentOS			|
+|:---------------------:	| :-----------: | :--------------:|
+| 							|데비안 계열	|레드햇 계열	|
+|리눅스 보안모듈 (LSM)		|AppArmor		|SELinux		|
 
 데비안 계열의 배포판으로는 우분투Ubuntu가 있다.
 
@@ -78,11 +80,30 @@ Red Hat이라는 기업이 관리하는 리눅스 배포판이 Red Hat Enterpris
 리눅스 커널이 단일한 보안 구현이 아닌 다양한 보안 모델을 지원할 수 있도록 함.
 AppArmor, SELinux, Smack, TOMOYO 리눅스 등이 있다.
 
+### AppArmor와 SELinux의 공통점: MAC vs. DAC
+강제적 접근 통제 (MAC, mandatory access control) 시스템을 리눅스에 제공한다.
+
+전통적인 유닉스와 리눅스는 임의적 접근 통제 (DAC, discretionary access control) 방식을 사용해왔다. DAC 시스템에서는 파일과 프로세스들은 **'소유자owner'**가 존재한다. 각 소유자가 파일에 대한 권한을 변경할 수 있는 재량이 있다.
+
+AppArmor와 SELinux는 리눅스에게 MAC 시스템을 제공한다.
+MAC 시스템에서는, 접근에 대한 관리 **정책policy**이 존재한다. DAC에서 사용자와 소유권에만 기반하는 것에 반해, MAC에서는 정의된 정책을 활용하여 접근 권한을 제어한다. 이를 통해 파일의 유형, 사용자의 역할, 프로그램의 기능과 신뢰도, 데이터의 민감성 무결성 등을 고려하여 보안을 유지할 수 있게 된다.
+
+### AppArmor와 SELinux의 차이점
+- file system labels: 파일 경로 vs. 아이노드inode
+AppArmor는 policy files에만 기초하는데 반해, SELinux는 polic-file과 right file system labels가 필요하다. SELinux는 경로 대신 아이노드inode(리눅스 파일 고유번호)에 기반하여 파일 시스템 객체들을 구별하지만, AppArmor는 파일 경로(file tree)를 이용한다.
+
+- AppArmor가 더 관리하기 쉽다.
+label 시스템의 차이 때문에, 배우는 것이 더 쉽고 더 적은 수정을 요구한다.
+
+### 설치
+
+추가 필요
+
 [위키백과, 리눅스 보안 모듈](https://ko.wikipedia.org/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B3%B4%EC%95%88_%EB%AA%A8%EB%93%88)
-
 [Red Hat, What is SELinux?](https://www.redhat.com/en/topics/linux/what-is-selinux)
-
 [AppArmor wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)
+[linuxreviews.org, AppArmor 설명](https://linuxreviews.org/AppArmor)
+[linuxhint, Debian AppArmor 튜토리얼](https://linuxhint.com/debian_apparmor_tutorial/)
 
 <!--
 #lvm
