@@ -4,17 +4,21 @@ title: "markdown 이용하기"
 tags: blog github_pages
 ---
 
-# 첫글
+# 첫 글
 
 ## 출처
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+[Github Pages Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 에서 가져왔다.
+
+---
 
 ## 이스케이프 문자
 
+
+
 ## 코드블럭 이용하기
 
-"```"를 이용하여 앞 뒤 한 줄씩 붙여준다.
+`\`\`\``를 이용하여 앞 뒤 한 줄씩 붙여준다.
 
 ```
 int	main(void)
