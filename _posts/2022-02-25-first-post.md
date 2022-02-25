@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "markdown 이용하기"
 tags: blog github_pages
 ---
