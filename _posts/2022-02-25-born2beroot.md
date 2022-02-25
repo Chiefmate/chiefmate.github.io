@@ -17,26 +17,38 @@ toc_icon: "cog"
 
 ## 모르는 단어 나열하기
 
-1. VirtualBox vs. UTM
-1. signature.txt
-1. Debian vs. CentOS
-1. apt vs. aptitude
-1. SELinux vs. AppArmor
-1. lvm
-1. ssh vs. telnet
-1. UFW firewall
-1. cron
+1. [VirtualBox vs. UTM](#vm)
+1. [signature.txt](#sign)
+1. [Debian vs. CentOS](#debianCentOS)
+1. [apt vs. aptitude](#apt)
+1. [SELinux vs. AppArmor](#lsm)
+1. [lvm](#lvm)
+1. [ssh vs. telnet](#ssh)
+1. [UFW firewall](#ufw)
+1. [cron](#cron)
 
+
+---
+
+<!--
+#vm
+-->
 ## VirtualBox vs. UTM
-가상 머신Virtual Machine.
+가상 머신 Virtual Machine
 
+<!--
+#sign
+-->
 ## signature.txt
+
 과제에서 평가를 위해 Virtual disk의 signature를 저장하라고 함.
 일단 [lvm파트](#lvm)를 읽어보자.
 
-
+<!--
+#debianCentOS
+-->
 ## Debian vs. CentOS
-리눅스 배포판Linux Distribution (Distro)
+리눅스 배포판 Linux Distribution (Distro)
 
 |리눅스 배포판			|Debian			|CentOS			|
 |:--------------------:	| :-----------: | :--------------:|
@@ -50,27 +62,40 @@ Red Hat이라는 기업이 관리하는 리눅스 배포판이 Red Hat Enterpris
 센토스CentOS는 레드햇 리눅스를 분기fork하여 상표를 제거한 것이라고 한다.
 
 
+<!--
+#apt
+-->
 ## apt vs. aptitude
 
-## SELinux vs. AppArmor
-Security Framework.
-응용프로그램Applications, 프로세스processes, 파일files에 접근할 수 있는 권한을 정의하고, 보안 정책security policies에 따라 접근을 제어함.
 
+<!--
+#lsm
+-->
+## SELinux vs. AppArmor
+리눅스 보안 모듈 Linux Security Modules (LSM)
+
+응용프로그램Applications, 프로세스processes, 파일files에 접근할 수 있는 권한을 정의하고, 보안 정책security policies에 따라 접근을 제어하는 보안 프레임 워크.
+리눅스 커널이 단일한 보안 구현이 아닌 다양한 보안 모델을 지원할 수 있도록 함.
+AppArmor, SELinux, Smack, TOMOYO 리눅스 등이 있다.
+
+[위키백과, 리눅스 보안 모듈](https://ko.wikipedia.org/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B3%B4%EC%95%88_%EB%AA%A8%EB%93%88)
 
 [Red Hat, What is SELinux?](https://www.redhat.com/en/topics/linux/what-is-selinux)
 
 [AppArmor wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)
 
-
-## lvm
 <!--
 #lvm
 -->
+## lvm
 LVM: Logical Volume Manager
 
 [리눅스 LVM과 RAID 개념](https://wiseworld.tistory.com/32)
 
 
+<!--
+#ssh
+-->
 ## ssh vs. telnet
 컴퓨터간 통신 Protocol.
 SSH와 TELNET ⊂ 응용 계층application layer ⊂ 인터넷 프로토콜 스위트Internet Protocol Suite
@@ -78,12 +103,14 @@ SSH와 TELNET ⊂ 응용 계층application layer ⊂ 인터넷 프로토콜 스�
 SSH: Secure Shell
 telnet: Teletype Over Network Protocol
 telnet은 1969년 개발 되었고, 보안문제로 인하여 SSH로 대부분 대체됨.
+SSH는 단순히 telnet을 대체할 뿐만 아니라, 다양한 추가 기능 제공.
 SSH는 1995년 처음 소개되었고, OpenSSH가 1999년 OpenBSD를 통해 공개.
 
 SSH를 통해 **암호화된 통신**으로:
 1. 네트워크 상의 다른 컴퓨터에 로그인
 1. 원격으로 명령 실행
 1. 다른 시스템으로 파일 복사
+를 할 수 있다.
 
 [Seung Hyun, SSH란 무엇인가요](https://medium.com/@jamessoun93/ssh%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-87b58c521d6f)
 
@@ -92,8 +119,20 @@ SSH를 통해 **암호화된 통신**으로:
 [위키백과, 텔넷](https://ko.wikipedia.org/wiki/%ED%85%94%EB%84%B7)
 
 
+<!--
+#ufw
+-->
 ## UFW firewall
+Uncomplicated Firewall (UFW)
+데비안 계열 및 다양한 리눅스 환경에서 작동하는 방화벽 관리 프로그램.
+UFW는 리눅스 커널 방화벽(넷필터 프레임워크, Netfilter)을 쉽게 관리할 수 있도록 해주는 프로그램이다.
 
+UFW는 명령줄 인터페이스(CLI)를 사용하고, iptables를 사용한다. 
+
+
+<!--
+#cron
+-->
 ## cron
 
 ## 참고
