@@ -189,7 +189,9 @@ backtick (`)를 코드블럭안에 넣으려면...
 <code>` `</code>대신 `<code> </code>`를 사용한다.
 
 
-<code>\<code\>`\<\/code></code>처럼 사용하면 된다.
+<code>``</code>를 사용하는 경우도 있다.
+
+``<code>`</code>``처럼 사용하면 된다.
 
 
 2. 통 코드블럭은
