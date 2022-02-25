@@ -2,6 +2,9 @@
 title: born2beroot
 tags: 42seoul
 layout: post
+toc: true
+toc_lable: "목차"
+toc_icon: "cog"
 ---
 
 # Born2beroot 배경지식 정리
