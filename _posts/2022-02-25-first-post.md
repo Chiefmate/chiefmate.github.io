@@ -186,16 +186,22 @@ _   underscore
 
 backtick (`)를 코드블럭안에 넣으려면...
 1. 인라인 코드블럭은
-<code>` `</code>대신 `<code> </code>`를 사용한다.
-
-
-<code>``</code>를 사용하는 경우도 있다.
+<code>` `</code>대신 `<code> </code>` 또는 <code>`` ``</code>를 사용한다.
 
 ``<code>`</code>``처럼 사용하면 된다.
 
 
-2. 통 코드블럭은
+1. 통 코드블럭은
 <code>```</code>대신 `~~~`를 사용한다.
+
+~~~
+```
+int	main(void)
+{
+	return (0);
+}
+```
+~~~
 
 ## 추가할 내용
 
