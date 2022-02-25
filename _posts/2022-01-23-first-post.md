@@ -18,29 +18,50 @@ tags: blog github_pages
 
 ## 코드블럭 이용하기
 
-`\`\`\``를 이용하여 앞 뒤 한 줄씩 붙여준다.
+`` ``` ``를 이용하여 앞 뒤 한 줄씩 붙여준다.
 
 ```
-int	main(void)
-{
-	return (0);
-}
+	```
+	int	main(void)
+	{
+		return (0);
+	}
+	```
 ```
-
 
 ### 언어 별 문법 하이라이트
-"``` c"와 같이 뒤에 언어를 붙여준다. jekyll이 `redcarpet`을 지원하면서 가능해졌다고 한다.
+`` ``` c ``와 같이 뒤에 언어를 붙여준다. jekyll이 `redcarpet`을 지원하면서 가능해졌다고 한다.
+
+Ruby 코드
+```
+	``` ruby
+	require 'redcarpet'
+	markdown = Redcarpet.new("Hello World!");
+	puts markdown.to_html
+	```
+```
+출력 결과
 ``` ruby
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!");
 puts markdown.to_html
 ```
 
+C 코드
+```
+	``` c
+	int	main(void)
+	{
+		return (0);
+	}
+	```
+```
+출력 결과
 ```c
-int	main(void)
-{
-	return (0);
-}
+	int	main(void)
+	{
+		return (0);
+	}
 ```
 
 ## 2단계제목
