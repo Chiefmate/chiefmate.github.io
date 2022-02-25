@@ -9,6 +9,10 @@ tags: blog github_pages
 코드블럭 이용하기
 ```
 ```
+```를 이용하면 된다.
+
+```
+```
 int	main(void)
 {
 	return (0);
