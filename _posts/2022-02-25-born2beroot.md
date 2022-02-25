@@ -103,11 +103,11 @@ label 시스템의 차이 때문에, 배우는 것이 더 쉽고 더 적은 수�
 
 추가 필요
 
-[위키백과, 리눅스 보안 모듈](https://ko.wikipedia.org/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B3%B4%EC%95%88_%EB%AA%A8%EB%93%88)
-[Red Hat, What is SELinux?](https://www.redhat.com/en/topics/linux/what-is-selinux)
-[AppArmor wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)
-[linuxreviews.org, AppArmor 설명](https://linuxreviews.org/AppArmor)
-[linuxhint, Debian AppArmor 튜토리얼](https://linuxhint.com/debian_apparmor_tutorial/)
+[위키백과, 리눅스 보안 모듈](https://ko.wikipedia.org/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B3%B4%EC%95%88_%EB%AA%A8%EB%93%88)<br>
+[Red Hat, What is SELinux?](https://www.redhat.com/en/topics/linux/what-is-selinux)<br>
+[AppArmor wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)<br>
+[linuxreviews.org, AppArmor 설명](https://linuxreviews.org/AppArmor)<br>
+[linuxhint, Debian AppArmor 튜토리얼](https://linuxhint.com/debian_apparmor_tutorial/)<br>
 
 <!--
 #lvm
@@ -137,12 +137,9 @@ SSH를 통해 **암호화된 통신**으로:
 1. 다른 시스템으로 파일 복사
 를 할 수 있다.
 
-[Seung Hyun, SSH란 무엇인가요](https://medium.com/@jamessoun93/ssh%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-87b58c521d6f)
-
-[위키백과, 시큐어 셸](https://ko.wikipedia.org/wiki/%EC%8B%9C%ED%81%90%EC%96%B4_%EC%85%B8)
-
-[위키백과, 텔넷](https://ko.wikipedia.org/wiki/%ED%85%94%EB%84%B7)
-
+[Seung Hyun, SSH란 무엇인가요](https://medium.com/@jamessoun93/ssh%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94-87b58c521d6f)<br>
+[위키백과, 시큐어 셸](https://ko.wikipedia.org/wiki/%EC%8B%9C%ED%81%90%EC%96%B4_%EC%85%B8)<br>
+[위키백과, 텔넷](https://ko.wikipedia.org/wiki/%ED%85%94%EB%84%B7)<br>
 
 <!--
 #ufw
