@@ -32,7 +32,7 @@ toc_icon: "cog"
 
 ## signature.txt
 과제에서 평가를 위해 Virtual disk의 signature를 저장하라고 함.
-일단 [lvm파트](##lvm)를 읽어보자.
+일단 [lvm파트](#lvm)를 읽어보자.
 
 ## Debian vs. CentOS
 리눅스 배포판Linux Distribution (Distro)
@@ -60,6 +60,7 @@ Security Framework.
 
 [AppArmor wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home)
 
+#lvm
 ## lvm
 LVM: Logical Volume Manager
 
