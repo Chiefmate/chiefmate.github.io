@@ -37,10 +37,10 @@ toc_icon: "cog"
 ## Debian vs. CentOS
 리눅스 배포판Linux Distribution (Distro)
 
-|리눅스 배포판		|Debian			|CentOS			|
-|---				| ---			|---			|
-| 					|데비안 계열	|레드햇 계열	|
-|Security Framework	|AppArmor		|SELinux		|
+|리눅스 배포판			|Debian			|CentOS			|
+|:--------------------:	| :-----------: | :--------------:|
+| 						|데비안 계열	|레드햇 계열	|
+|Security Framework		|AppArmor		|SELinux		|
 
 데비안 계열의 배포판으로는 우분투Ubuntu가 있다.
 
