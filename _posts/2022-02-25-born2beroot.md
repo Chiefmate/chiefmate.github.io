@@ -1,7 +1,7 @@
 ---
 title: born2beroot
 tags: 42seoul
-layout: post
+layout: posts
 toc: true
 toc_lable: "목차"
 toc_icon: "cog"
