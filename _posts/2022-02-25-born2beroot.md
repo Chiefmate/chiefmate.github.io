@@ -37,15 +37,16 @@ toc_icon: "cog"
 ## Debian vs. CentOS
 리눅스 배포판Linux Distribution (Distro)
 
-|리눅스 배포판	|Debian		|CentOS		|
-|---			| ---		|			|
-| 				| 데비안 계열	|	레드햇 계열	|
-|				|				|				|
+|리눅스 배포판		|Debian			|CentOS			|
+|---				| ---			|---			|
+| 					|데비안 계열	|레드햇 계열	|
+|Security Framework	|AppArmor		|SELinux		|
 
 데비안 계열의 배포판으로는 우분투Ubuntu가 있다.
 
 레드햇 계열의 배포판으로는 Red Hat의 커뮤니티 버전 Fedora와 CentOS 등이 있다.
 Red Hat이라는 기업이 관리하는 리눅스 배포판이 Red Hat Enterprise Linux다. 해당 리눅스를 이용하면 Red Hat에서 유지 보수를 지원하기 때문에 기업에서 선호한다고 한다.
+센토스CentOS는 레드햇 리눅스를 분기fork하여 상표를 제거한 것이라고 한다.
 
 
 ## apt vs. aptitude
