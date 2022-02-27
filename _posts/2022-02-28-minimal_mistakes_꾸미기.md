@@ -4,6 +4,11 @@ tags: blog github_pages
 layout: posts
 ---
 
+# 할 일
+---
+1. 메인 꾸미기
+1. 좋아요 기능 추가
+
 
 # 링크 밑줄 제거
 ---

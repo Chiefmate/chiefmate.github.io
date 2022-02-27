@@ -1,5 +1,5 @@
 ---
-title: Born2beroot 배경지식 정리
+title: "Born2beroot 배경지식 정리"
 tags: 42seoul
 layout: posts
 toc: true
