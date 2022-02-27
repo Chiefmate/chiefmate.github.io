@@ -1,5 +1,5 @@
 ---
-title: born2beroot
+title: Born2beroot 배경지식 정리
 tags: 42seoul
 layout: posts
 toc: true
@@ -7,53 +7,45 @@ toc_lable: "English"
 toc_icon: "cog"
 ---
 
-# Born2beroot 배경지식 정리
-
-## 네트워크 기본 개념 정리
-
+# 네트워크 기본 개념 정리
+---
 [서버란?](https://lipcoder.tistory.com/514)
 [네트워크 기초 지식](https://lipcoder.tistory.com/515?category=908023)
 
-## 모르는 단어 나열하기
 
-1. [VirtualBox vs. UTM](#vm)
-1. [signature.txt](#sign)
-1. [Debian vs. CentOS](#debianCentOS)
-1. [apt vs. aptitude](#apt)
-1. [SELinux vs. AppArmor](#lsm)
-1. [lvm](#lvm)
-1. [ssh vs. telnet](#ssh)
-1. [UFW firewall](#ufw)
-1. [cron](#cron)
-
-
+# 모르는 단어 나열하기
 ---
+1. VirtualBox vs. UTM
+1. signature.txt
+1. Debian vs. CentOS
+1. apt vs. aptitude
+1. SELinux vs. AppArmor
+1. lvm
+1. ssh vs. telnet
+1. UFW firewall
+1. cron
 
-<!--
-#vm
--->
-## VirtualBox vs. UTM
+
+# VirtualBox vs. UTM
+---
 가상 머신 Virtual Machine
 
-### VDI
+
+## VDI
 Virtual Disk Image
 
 버츄얼 박스는 3가지 포맷으로 하드디스크를 에뮬레이션함:
 native VDI, VMware의 VMDK, MS 윈도우의 VHD
 
 
-<!--
-#sign
--->
-## signature.txt
-
+# signature.txt
+---
 과제에서 평가를 위해 Virtual disk의 signature를 저장하라고 함.
 일단 [lvm파트](#lvm)를 읽어보자.
 
-<!--
-#debianCentOS
--->
-## Debian vs. CentOS
+
+# Debian vs. CentOS
+---
 리눅스 배포판 Linux Distribution (Distro)
 
 |리눅스 배포판 				|Debian					|CentOS			|
@@ -73,10 +65,9 @@ CentOS는 레드햇 리눅스(RHEL)를 분기fork하여 상표를 제거한 것�
 [educba.com CentOS vs. Debian](https://www.educba.com/centos-vs-debian/)<br>
 [리눅스 파일시스템 비교 ext4 vs. xfs](https://m.blog.naver.com/hymne/220976678541)
 
-<!--
-#apt
--->
-## apt vs. aptitude
+
+# apt vs. aptitude
+---
 APT: Advanced Packaging Tool<br>
 데비안 계열의 시스템에서는 패키지 매니저 apt를 이용하여 소프트웨어를 설치한다.
 
@@ -91,24 +82,23 @@ apt-get autoremove가 이를 해결하기 위해 등장했지만, 이외에도 a
 [Linuxmint 커뮤니티, aptitude vs. apt vs. apt-get](http://linuxmint.kr/Etc/2062)
 
 
-<!--
-#lsm
--->
-## SELinux vs. AppArmor
+# SELinux vs. AppArmor
+---
 리눅스 보안 모듈 Linux Security Modules (LSM)
 
 응용프로그램Applications, 프로세스processes, 파일files에 접근할 수 있는 권한을 정의하고, 보안 정책security policies에 따라 접근을 제어하는 보안 프레임 워크.
 리눅스 커널이 단일한 보안 구현이 아닌 다양한 보안 모델을 지원할 수 있도록 함.
 AppArmor, SELinux, Smack, TOMOYO 리눅스 등이 있다.
 
-### AppArmor와 SELinux의 공통점: MAC vs. DAC
+
+## AppArmor와 SELinux의 공통점: MAC vs. DAC
 강제적 접근 통제 (MAC, mandatory access control) 시스템을 리눅스에 제공한다.<br>
 전통적인 유닉스와 리눅스는 임의적 접근 통제 (DAC, discretionary access control) 방식을 사용해왔다. DAC 시스템에서는 파일과 프로세스들은 **'소유자owner'**가 존재한다. 각 소유자가 파일에 대한 권한을 변경할 수 있는 재량이 있다.
 
 AppArmor와 SELinux는 리눅스에게 MAC 시스템을 제공한다.<br>
 MAC 시스템에서는, 접근에 대한 관리 **정책policy**이 존재한다. DAC에서 사용자와 소유권에만 기반하는 것에 반해, MAC에서는 정의된 정책을 활용하여 접근 권한을 제어한다. 이를 통해 파일의 유형, 사용자의 역할, 프로그램의 기능과 신뢰도, 데이터의 민감성 무결성 등을 고려하여 보안을 유지할 수 있게 된다.
 
-### AppArmor와 SELinux의 차이점
+## AppArmor와 SELinux의 차이점
 - file system labels: 파일 경로 vs. 아이노드inode<br>
 AppArmor는 policy files에만 기초하는데 반해, SELinux는 polic-file과 right file system labels가 필요하다. SELinux는 경로 대신 아이노드inode(리눅스 파일 고유번호)에 기반하여 파일 시스템 객체들을 구별하지만, AppArmor는 파일 경로(file tree)를 이용한다.
 
@@ -125,7 +115,8 @@ label 시스템의 차이 때문에, 배우는 것이 더 쉽고 더 적은 수�
 <!--
 #lvm
 -->
-## lvm
+# lvm
+---
 LVM: Logical Volume Manager
 
 LVM은 리눅스 커널에 구현된 기능으로, 디스크를 볼륨 단위로 관리하여 효율적으로 사용할 수 있도록 한다.
@@ -133,7 +124,7 @@ LVM은 리눅스 커널에 구현된 기능으로, 디스크를 볼륨 단위로
 
 개인사용자의 경우 디스크의 공간이 부족하면, 디스크를 갈아끼우면 그만이지만, 서버의 경우에는 거대한 디스크의 데이터를 백업후 옮기는 일이 무척 어렵다. LVM을 사용하면 **기존 사용중인 디스크의 공간을 확장**하는 것이 훨씬 용이해진다.
 
-### 파티션, 볼륨
+## 파티션, 볼륨
 물리 디스크는 파티션이라는 논리적 개념으로 분할/통합하여 사용한다.
 1. 하나의 디스크 → 하나의 파티션
 1. 하나의 디스크 → 여러개의 파티션
@@ -150,7 +141,7 @@ LVM은 리눅스 커널에 구현된 기능으로, 디스크를 볼륨 단위로
 이 가능하다.
 
 
-### PV, PE, VG, LV, LE
+## PV, PE, VG, LV, LE
 
 1. 물리 볼륨(PV, Physical Volume), PE(Physical Extent)
 1. 볼륨 그룹(VG, Volume Group)
@@ -172,15 +163,13 @@ PE ⊂ PV ⊂ VG
 LE ⊂ LV ⊂ VG
 
 
-
 [리눅스 LVM과 RAID 개념](https://wiseworld.tistory.com/32)
 [농심클라우드, LVM 개념](https://tech.cloud.nongshim.co.kr/2018/11/23/lvmlogical-volume-manager-1-%EA%B0%9C%EB%85%90/)
 [LVM이란? 매우 쉽게](https://mamu2830.blogspot.com/2019/12/lvmpv-vg-lv-pe-lvm.html)
 
-<!--
-#ssh
--->
-## ssh vs. telnet
+
+# ssh vs. telnet
+---
 컴퓨터간 통신 Protocol.
 SSH와 TELNET ⊂ 응용 계층application layer ⊂ 인터넷 프로토콜 스위트Internet Protocol Suite
 
@@ -200,10 +189,9 @@ SSH를 통해 **암호화된 통신**으로:
 [위키백과, 시큐어 셸](https://ko.wikipedia.org/wiki/%EC%8B%9C%ED%81%90%EC%96%B4_%EC%85%B8)<br>
 [위키백과, 텔넷](https://ko.wikipedia.org/wiki/%ED%85%94%EB%84%B7)<br>
 
-<!--
-#ufw
--->
-## UFW firewall
+
+# UFW firewall
+---
 Uncomplicated Firewall (UFW)
 데비안 계열 및 다양한 리눅스 환경에서 작동하는 방화벽 관리 프로그램.
 UFW는 리눅스 커널 방화벽(넷필터 프레임워크, Netfilter)을 쉽게 관리할 수 있도록 해주는 프로그램이다.
@@ -211,12 +199,11 @@ UFW는 리눅스 커널 방화벽(넷필터 프레임워크, Netfilter)을 쉽�
 UFW는 명령줄 인터페이스(CLI)를 사용하고, iptables를 사용한다. 
 
 
-<!--
-#cron
--->
-## cron
+# cron
+---
+추가 예정
 
-## 참고
-
+# 참고
+---
 [born2beroot 삽질의 흔적](https://tbonelee.tistory.com/m/16)
 [newmon, born2beroot overview](https://infinitt.tistory.com/390)
