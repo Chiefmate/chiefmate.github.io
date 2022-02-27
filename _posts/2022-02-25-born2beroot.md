@@ -1,9 +1,9 @@
 ---
+toc: true
+toc_label: "목차"
 title: "Born2beroot 배경지식 정리"
 tags: 42seoul
 layout: posts
-toc: true
-toc_label: "목차"
 ---
 
 # 네트워크 기본 개념 정리
