@@ -4,13 +4,12 @@ tags: 42seoul
 layout: posts
 toc: true
 toc_label: "목차"
-toc_icon: "cog"
 ---
 
 # 네트워크 기본 개념 정리
 ---
-[서버란?](https://lipcoder.tistory.com/514)
-[네트워크 기초 지식](https://lipcoder.tistory.com/515?category=908023)
+[서버란?](https://lipcoder.tistory.com/514)<br>
+[네트워크 기초 지식](https://lipcoder.tistory.com/515?category=908023)<br>
 
 
 # 모르는 단어 나열하기
@@ -205,5 +204,5 @@ UFW는 명령줄 인터페이스(CLI)를 사용하고, iptables를 사용한다.
 
 # 참고
 ---
-[born2beroot 삽질의 흔적](https://tbonelee.tistory.com/m/16)
-[newmon, born2beroot overview](https://infinitt.tistory.com/390)
+[born2beroot 삽질의 흔적](https://tbonelee.tistory.com/m/16)<br>
+[newmon, born2beroot overview](https://infinitt.tistory.com/390)<br>
