@@ -3,7 +3,7 @@ title: Born2beroot 배경지식 정리
 tags: 42seoul
 layout: posts
 toc: true
-toc_lable: "English"
+toc_label: "목차"
 toc_icon: "cog"
 ---
 
