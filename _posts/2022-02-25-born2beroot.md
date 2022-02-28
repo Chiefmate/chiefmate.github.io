@@ -1,6 +1,4 @@
 ---
-toc: true
-toc_label: "목차"
 title: "Born2beroot 배경지식 정리"
 tags: 42seoul
 layout: posts
