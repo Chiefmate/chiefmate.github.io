@@ -117,7 +117,7 @@ Debian OS iso파일 다운받은 후, 마운트하고 부팅시키기
 hostname 원하는대로 `hyunhole42` 해주고,
 domain은 빈 칸
 
-루트 암호는 `intel123`으로 해줬다
+루트 암호는 `Intel123`으로 해줬다
 
 새로운 유저 과제에 제시된대로 `hyunhole` 유저도 만들었다. 암호는 `Intel123`
 
