@@ -21,6 +21,7 @@ layout: posts
 1. ssh vs. telnet
 1. UFW firewall
 1. cron
+1. IPv4 주소와 MAC(Media Access Control)주소
 
 
 # VirtualBox vs. UTM
