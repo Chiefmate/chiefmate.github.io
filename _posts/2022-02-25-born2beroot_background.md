@@ -215,18 +215,31 @@ UFW는 명령줄 인터페이스(CLI)를 사용하고, iptables를 사용한다.
 # cron
 ---
 유닉스 계열 컴퓨터 운영체제의 시간 기반 잡 스케쥴러
-작업을 고정된 시간, 날짜, 간격에 주기적으로 실행할 수 있도록 스케줄링하기 위해 cron을 사용함.
+`cron`을 사용하면 작업을 고정된 시간, 날짜, 간격에 주기적으로 실행할 수 있도록 스케줄링할 수 있음.
 
-crontab(cron table)파일에 주기적 일정에 셸 명령어를 실행하도록 규정되어있음.
-유저들은 각각 자신의 crontab 파일을 가질 수 있음.
-/etc 또는 그 하위 디렉터리에 시스템 관리자들만 편집할 수 있는, 시스템 전부에 영향을 미치는 crontab 파일 존재할 수도 있음.
+`crontab`(cron table)파일에 주기적 일정에 셸 명령어를 실행하도록 규정되어있음.
+유저들은 각각 자신의 `crontab` 파일을 가질 수 있음.
+`/etc` 또는 그 하위 디렉터리에 시스템 관리자들만 편집할 수 있는, 시스템 전부에 영향을 미치는 `crontab` 파일 존재할 수도 있음.
 
 ```sh
 $ crontab -e
 ```
-를 사용하여 유저를 위한 crontab 파일을 편집할 수 있음.
+를 사용하여 유저를 위한 `crontab` 파일을 편집할 수 있음.
 
+`crontab` 파일의 문법
+```
+ # ┌───────────── min (0 - 59)
+ # │ ┌────────────── hour (0 - 23)
+ # │ │ ┌─────────────── day of month (1 - 31)
+ # │ │ │ ┌──────────────── month (1 - 12)
+ # │ │ │ │ ┌───────────────── day of week (0 - 6) (0 to 6 are Sunday to Saturday, or use names; 7 is Sunday, the same as 0)
+ # │ │ │ │ │
+ # │ │ │ │ │
+ # * * * * *  command to execute
+```
 
+[위키백과, cron](https://ko.wikipedia.org/wiki/Cron)<br>
+[크론 표현식](https://madplay.github.io/post/a-guide-to-cron-expression)
 
 추가 예정
 
