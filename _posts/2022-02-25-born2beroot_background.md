@@ -170,14 +170,15 @@ LV에서 사용되는 디스크 기본단위는 PE가 아니라 LE가 된다.
 
 현재 사용되는 LVM은 LVM2 인데, PE와 LE 모두 기본값이 4MB라고 한다.
 
-정리하면 
-PE ⊂ PV ⊂ VG
+정리하면<br>
+```
+PE ⊂ PV ⊂ VG<br>
 LE ⊂ LV ⊂ VG
+```
 
-
-[리눅스 LVM과 RAID 개념](https://wiseworld.tistory.com/32)
-[농심클라우드, LVM 개념](https://tech.cloud.nongshim.co.kr/2018/11/23/lvmlogical-volume-manager-1-%EA%B0%9C%EB%85%90/)
-[LVM이란? 매우 쉽게](https://mamu2830.blogspot.com/2019/12/lvmpv-vg-lv-pe-lvm.html)
+[리눅스 LVM과 RAID 개념](https://wiseworld.tistory.com/32)<br>
+[농심클라우드, LVM 개념](https://tech.cloud.nongshim.co.kr/2018/11/23/lvmlogical-volume-manager-1-%EA%B0%9C%EB%85%90/)<br>
+[LVM이란? 매우 쉽게](https://mamu2830.blogspot.com/2019/12/lvmpv-vg-lv-pe-lvm.html)<br>
 
 
 # ssh vs. telnet
