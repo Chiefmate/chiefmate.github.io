@@ -105,7 +105,7 @@ VirtualBox 실행
 
 ## VirtualBox 조작 팁
 디스플레이 사이즈 조정
-
+`cmd + c` 로 스케일 모드로 들어가면 됨
 
 `/goinfre/(intraID)` 에 설치
 

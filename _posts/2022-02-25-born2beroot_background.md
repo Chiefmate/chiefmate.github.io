@@ -28,6 +28,20 @@ layout: posts
 ---
 가상 머신 Virtual Machine
 
+## 가상머신 용어 정리
+1. 에뮬레이션Emulation
+모든 부품의 모든 기능을 소프트웨어적으로 구현함. 속도는 가장 느리지만 범용성은 가장 뛰어남
+1. 가상화Virtualization
+CPU 등 주요 부품의 기능에서 하드웨어의 기능을 지원 받음. 속도는 빠르지만 해당 하드웨어에 종속적이므로 범용성이 떨어짐. 예를 들어 CPU를 가상화하면 실제 CPU가 처리하는 기계어 세트(ISA)에서 크게 벗어날 수 없음. M1 맥에서 x86 윈도를 돌릴 수 없는 이유
+1. 반가상화Paravirtualization
+기반이 되는 하드웨어, 소프트웨어와 동일하지는 않지만 비슷한 가상 머신에 대한 소프트웨어 인터페이스를 제공하는 기술. 완전한 에뮬레이션/가상화를 포기하지만, 속도는 가장 빠름. 그러나 운영체제와 드라이버에 종속되어서 범용성은 가장 떨어짐. Hypervisor를 이용. 가상머신에 설치되는 OS를 수정하거나 전용 드라이버를 이용하여 하드웨어에 직접 접근함.
+
+## 가상머신 사용 목적
+1. 하나의 시스템에서 서로 다른 2개 이상의 운영체제 실행
+1. 하나의 시스템 자원을 여러 사용자에게 나누어 주는 상황에서, 상호 간섭을 없애기 위함. 클라우드의 가상머신이 예시
+1. 컴퓨터의 다른 부분에 영향을 주지 않는 독립 환경을 만들고자 할 때. 악성 코드 분석할 때도 사용함
+
+출처: [가상머신을 사용하는 이유](https://inpages.tistory.com/86)
 
 ## VDI
 Virtual Disk Image
@@ -205,3 +219,4 @@ UFW는 명령줄 인터페이스(CLI)를 사용하고, iptables를 사용한다.
 ---
 [born2beroot 삽질의 흔적](https://tbonelee.tistory.com/m/16)<br>
 [newmon, born2beroot overview](https://infinitt.tistory.com/390)<br>
+[Born2beroot 설치 및 세팅만 정리](https://techdebt.tistory.com/18?category=833728)
