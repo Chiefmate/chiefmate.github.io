@@ -120,5 +120,51 @@ domain은 빈 칸
 
 새로운 유저 과제에 제시된대로 `hyunhole` 유저도 만들었다. 암호는 `Intel123`
 
-파티션
+파티션은 `max`입력 후 Guided for encryption, Finish partitioning and write changes to disk 누른다.
+
+GRUB 부트로더는 Yes 누른 후 /dev/sda 에 설치하면 자동으로 /dev/sda1에 설치된다.
+
+설치 완료 후 로그인한다.
+
+`$lsblk` 입력하면 파티션 확인가능하다.
+
+`apt`는 설치되어있음
+
+`vim` 설치
+```sh
+apt-get update
+apt-get install vim
+```
+
+`sudo` 설치
+```sh
+apt-get update
+apt-get install sudo
+```
+
+
+visudo는 vim을 설치하면 같이 설치됨.
+`$visudo` 입력하면 자동으로 /etc/sudoers.tmp 연결
+sudo 그룹 정책수정하기.
+1. `sudo`를 이용한 인증에서, 암호가 틀리는 것은 최대 3번까지로 제한됨
+
+1. `sudo`를 이용할 때 암호가 틀릴 경우, 본인이 선택한 문구의 에러 메시지가 표시되어야 함
+1. `sudo`를 이용한 각 행동은 입력과 출력 모두 기록될 것. 로그 파일은 `/var/log/sudo/` 폴더에 저장됨.
+1. 보안을 위하여 `TTY` 모드가 활성화 되어야 함
+1. 보안을 위하여 `sudo`에 의해 사용될 수 있는 경로는 제한되어야 함. 예시: `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin`
+
+`$man sudoers`, `$man visudo`를 통해 매뉴얼 확인가능
+ㄴ
+
+
+
+hostname 확인하기
+
+로그아웃 하고 다른 유저로 로그인하기 `su`
+`$su root`를 통해서 root 유저로 로그인 가능
+[리눅스 su 이용하기](https://zitto15.tistory.com/31)
+
+사용자 계정 추가하기 `useradd`
+[리눅스 사용자 관리: useradd, passwd, 시스템계정](https://jhnyang.tistory.com/10)
+
 

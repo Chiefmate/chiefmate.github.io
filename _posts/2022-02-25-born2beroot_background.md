@@ -22,6 +22,7 @@ layout: posts
 1. UFW firewall
 1. cron
 1. IPv4 주소와 MAC(Media Access Control)주소
+1. GRUB 부트로더
 
 
 # VirtualBox vs. UTM
@@ -240,6 +241,13 @@ $ crontab -e
 
 [위키백과, cron](https://ko.wikipedia.org/wiki/Cron)<br>
 [크론 표현식](https://madplay.github.io/post/a-guide-to-cron-expression)
+
+# IPv4 주소와 MAC(Media Access Control)주소
+---
+추가 예정
+
+# GRUB 부트로더
+---
 
 추가 예정
 
