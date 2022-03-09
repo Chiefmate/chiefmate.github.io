@@ -142,7 +142,6 @@ apt-get update
 apt-get install sudo
 ```
 
-
 visudo는 vim을 설치하면 같이 설치됨.
 `$visudo` 입력하면 자동으로 /etc/sudoers.tmp 연결
 sudo 그룹 정책수정하기.
@@ -160,11 +159,19 @@ sudo 그룹 정책수정하기.
 
 hostname 확인하기
 
+
+
 로그아웃 하고 다른 유저로 로그인하기 `su`
 `$su root`를 통해서 root 유저로 로그인 가능
 [리눅스 su 이용하기](https://zitto15.tistory.com/31)
 
 사용자 계정 추가하기 `useradd`
 [리눅스 사용자 관리: useradd, passwd, 시스템계정](https://jhnyang.tistory.com/10)
+
+
+UFW Firewall 설치
+
+
+ssh 설정
 
 

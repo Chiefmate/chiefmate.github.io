@@ -18,6 +18,8 @@ layout: posts
 1. apt vs. aptitude
 1. SELinux vs. AppArmor
 1. lvm
+1. 리눅스 사용자(User)
+1. sudo
 1. ssh vs. telnet
 1. UFW firewall
 1. cron
@@ -180,6 +182,86 @@ LE ⊂ LV ⊂ VG
 [리눅스 LVM과 RAID 개념](https://wiseworld.tistory.com/32)<br>
 [농심클라우드, LVM 개념](https://tech.cloud.nongshim.co.kr/2018/11/23/lvmlogical-volume-manager-1-%EA%B0%9C%EB%85%90/)<br>
 [LVM이란? 매우 쉽게](https://mamu2830.blogspot.com/2019/12/lvmpv-vg-lv-pe-lvm.html)<br>
+
+# 리눅스 사용자 (User)
+---
+리눅스를 포함하여 유닉스 계열 OS의 장점 중 하나는 멀티 유저 환경을 제공한다는 것이다. 유닉스 계열 OS를 통해 한 시스템을 여러명의 사용자가 동시에 사용할 수 있다.
+
+Debian의 경우 `adduser`와 `deluser`를 `adduser`패키지를 통해 제공하고 있다. 이 명령어들은 Debian의 특성을 고려하여 좀 더 편리하게 유저를 관리할 수 있게 해주지만, 다른 리눅스에서는 대부분 제공하지 않는다. Ubuntu는 Debian 계열 OS라서 `adduser` 등을 제공한다.
+
+아래의 명렁어들은 low-level에서 유저의 id와 암호를 관리할 수 있게 해준다. 직접 유저 데이터베이스를 다룰 수 있게 해준다.
+1. 비밀번호 바꾸기 Change Password (passwd)
+1. 계정 만들기 Create an Account (useradd)
+1. 계정 삭제하기 Delete an Account (userdel)
+1. 계정 속성 수정하기 Modify an Account's properties (usermod)
+1. 로그인 쉘 바꾸기 Change login shell (chsh)
+1. 사용자 정보 바꾸기 Change user information (chfn) (fn means "full name")
+
+## 현재 유저 확인하기
+```sh
+$ whoami
+```
+`whoami`를 통해 간단하게 유저 이름을 확인할 수 있다.
+
+```sh
+$ echo $USER
+```
+환경변수 `$USER`를 호출하여 확인할 수도 있다. 
+
+```sh
+$ w
+```
+`w` 명령어는 더 자세한 내용을 알려준다. 각 내용에 대한 자세한 설명은 [여기](https://www.howtogeek.com/410423/how-to-determine-the-current-user-account-in-linux/)를 참고.
+
+## 다른 유저로 로그인하기
+
+## 유저 추가하기
+
+
+[DebianWiki, UserAccounts](https://wiki.debian.org/UserAccounts)
+[howtogeek, how to determine the current user account in linux](https://www.howtogeek.com/410423/how-to-determine-the-current-user-account-in-linux/)
+[위드코딩, 리눅스 사용자 관리 명령어](https://withcoding.com/101)
+[여행을 개발하다, linux useradd 정리](https://tragramming.tistory.com/85)
+
+
+# `sudo`
+---
+
+`sudo`는 **Su**per-**u**ser **do**의 줄임말이라고 여겨지는 유틸리티 프로그램이다.
+시스템 관리자가 유저들에게 몇몇 명령어들을 `root`유저(혹은 다른 유저) 권한으로 실행할 수 있도록 하는 프로그램이다.
+`sudo`를 통해 유저들에게 몇 안되는 명령어만 허용하면서도 유저들이 일하는데 문제가 없도록 하는 것이 기본 철학.
+언제, 어떤 명령어를 실행했는지 기록하는 효과적인 방법이기도 하다.
+
+## 왜 `sudo`를 쓸까?
+`sudo`는 root 유저로 세션을 여는 것 대신 더 안전하고 더 나은 방법을 제공한다.
+
+1. root유저의 암호를 알 필요가 없다(`sudo`는 해당 유저의 암호를 입력 요구함). 몇 가지의 명령어만 유저에게 주어졌다가 바로 회수된다.
+1. `sudo`를 통해 몇 개의 특별히 허용된 명령어만 사용하는 것이 더 쉽다. 나머지 시간에는 권한이 없는 사용자로 일하면서, 실수로 만들 수 있는 데미지를 막을 수 있다.
+1. 감시/기록: `sudo`가 실행될 때, 이용한 유저 이름과 명령어가 기록된다.
+
+`sudo -i` 혹은 `sudo su`를 통해 root 유저로 로그인해서 세션을 여는 것은, 위의 장점들을 없애기 때문에 보통 더 이상 사용되지 않는다.
+
+## 유저와 `sudo`
+
+Debian에서 기본 설정default은 `sudo` 그룹의 모든 유저가 모든 명령어를 실행 가능할 수 있게 되어있다.
+
+### 유저가 `sudo` 그룹에 포함되어 있는지 확인하기
+
+해당 유저로 로그인 한 후,
+```sh
+$ groups
+```
+를 입력한 후 결과를 확인하거나,
+```sh
+$ foo sudo
+```
+를 통해 `id=foo`라는 유저가 `sudo` 그룹에 포함되어 있는지 확인할 수 있다.
+
+### 유저를 `sudo` 그룹에 포함시키기
+
+
+
+[Debian wiki, sudo](https://wiki.debian.org/sudo?action=show&redirect=Sudo)
 
 
 # ssh vs. telnet
