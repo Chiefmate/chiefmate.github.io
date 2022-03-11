@@ -213,15 +213,37 @@ $ w
 ```
 `w` 명령어는 더 자세한 내용을 알려준다. 각 내용에 대한 자세한 설명은 [여기](https://www.howtogeek.com/410423/how-to-determine-the-current-user-account-in-linux/)를 참고.
 
+## 유저 목록 확인하기
+```sh
+cat /etc/passwd
+```
+`etc/passwd`를 확인하는 방법.
+
+```sh
+cut -fl -d: /etc/passwd
+```
+아이디만 잘라서 보여준다.
+
+
+```sh
+grep /bin/bash /etc/passwd
+```
+```sh
+grep /bin/bash /etc/passwd | cut -fl -d:
+```
+
+이런 방법도 있다.
+[참고](https://overcode.tistory.com/entry/%EB%A6%AC%EB%88%85%EC%8A%A4-%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%AA%A9%EB%A1%9D-%ED%99%95%EC%9D%B8-Linux-User-List)
+
 ## 다른 유저로 로그인하기
 
 ## 유저 추가하기
 
 
-[DebianWiki, UserAccounts](https://wiki.debian.org/UserAccounts)
-[howtogeek, how to determine the current user account in linux](https://www.howtogeek.com/410423/how-to-determine-the-current-user-account-in-linux/)
-[위드코딩, 리눅스 사용자 관리 명령어](https://withcoding.com/101)
-[여행을 개발하다, linux useradd 정리](https://tragramming.tistory.com/85)
+[DebianWiki, UserAccounts](https://wiki.debian.org/UserAccounts)<br>
+[howtogeek, how to determine the current user account in linux](https://www.howtogeek.com/410423/how-to-determine-the-current-user-account-in-linux/)<br>
+[위드코딩, 리눅스 사용자 관리 명령어](https://withcoding.com/101)<br>
+[여행을 개발하다, linux useradd 정리](https://tragramming.tistory.com/85)<br>
 
 
 # `sudo`
