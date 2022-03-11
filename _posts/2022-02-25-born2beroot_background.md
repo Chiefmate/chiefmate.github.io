@@ -237,13 +237,40 @@ grep /bin/bash /etc/passwd | cut -fl -d:
 
 ## 다른 유저로 로그인하기
 
+```sh
+su username
+```
+으로 `username`계정으로 로그인 할 수 있다.
+
+```sh
+su
+```
+와 같이 유저를 지정하지 않는 경우 `root`유저로 로그인 시도한다. 
+
 ## 유저 추가하기
+```sh
+useradd user1
+passwd user1
+```
+를 통해 `user1`이라는 유저를 만들고  `user1`의 암호를 설정해줄 수도 있다.
+해당 비밀번호는 `/etc/passwd`파일에 저장된다.
+
+옵션을 이용하여 한번에 사용해보자.
+```sh
+useradd -m -g sudo user2
+```
+`-m`옵션으로 홈 디렉터리를 자동으로 생성해준다. 이 옵션이 없으면 디렉터리 경로만 지정되고 만들어주지는 않는다.
+`-g sudo`옵션을 통해 `sudo`그룹에 `user2`를 포함시킨다.
+
 
 
 [DebianWiki, UserAccounts](https://wiki.debian.org/UserAccounts)<br>
 [howtogeek, how to determine the current user account in linux](https://www.howtogeek.com/410423/how-to-determine-the-current-user-account-in-linux/)<br>
 [위드코딩, 리눅스 사용자 관리 명령어](https://withcoding.com/101)<br>
 [여행을 개발하다, linux useradd 정리](https://tragramming.tistory.com/85)<br>
+[리눅스/유닉스 사용자 관리](https://jhnyang.tistory.com/10)
+
+
 
 
 # `sudo`
@@ -263,9 +290,17 @@ grep /bin/bash /etc/passwd | cut -fl -d:
 
 `sudo -i` 혹은 `sudo su`를 통해 root 유저로 로그인해서 세션을 여는 것은, 위의 장점들을 없애기 때문에 보통 더 이상 사용되지 않는다.
 
+## `sudo` 설치
+```sh
+apt-get install sudo
+```
+
 ## 유저와 `sudo`
 
 Debian에서 기본 설정default은 `sudo` 그룹의 모든 유저가 모든 명령어를 실행 가능할 수 있게 되어있다.
+
+### `sudo` 그룹 만들기
+
 
 ### 유저가 `sudo` 그룹에 포함되어 있는지 확인하기
 
@@ -281,6 +316,15 @@ $ foo sudo
 
 ### 유저를 `sudo` 그룹에 포함시키기
 
+## `visudo`로 `/etc/sudoers` 수정하기
+
+```sh
+Defaults	passwd_tries=3
+Defaults	badpass_message="wrong password!"
+Defaults	log_input, log_output, iolog_dir="/var/log/sudo"
+Defaults	requiretty
+```
+를 앞부분에 추가해준다.
 
 
 [Debian wiki, sudo](https://wiki.debian.org/sudo?action=show&redirect=Sudo)
@@ -360,3 +404,4 @@ $ crontab -e
 [born2beroot 삽질의 흔적](https://tbonelee.tistory.com/m/16)<br>
 [newmon, born2beroot overview](https://infinitt.tistory.com/390)<br>
 [Born2beroot 설치 및 세팅만 정리](https://techdebt.tistory.com/18?category=833728)
+[Born2beroot 아카이브](https://parkseunghan.notion.site/born2beroot-afdb78d74995456d9c91a4ae1be9874f)
